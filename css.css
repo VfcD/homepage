@@ -1,6 +1,6 @@
 body, html {
   height: 100%;
-  font: 400 15px/1.8 "Lato", sans-serif;
+  font: 400 18px/1.8 "Lato", sans-serif;
   color: #111;
   background-color:#fff;
 
@@ -26,7 +26,6 @@ nav ul {
   background-color: #fff;
 }
 nav li {
-
   float: left;
 }
 
@@ -107,16 +106,24 @@ nav a:active {
     background-attachment: scroll;
   }
 }
+.Content {
+  color: #777;
+  background-color:white;
+  text-align:justify;
+  padding:50px 80px;
+}
+.Content h1{
+  text-align: center;
+}
 
-.Kontakt{
-
+.Impressum {
   color: #777;
   background-color:white;
   text-align:center;
   padding:50px 80px;
 }
 
-.Kontakt img:hover{
+footer img:hover{
   animation: shake 0.5s;
   animation-iteration-count: infinite;
 }
@@ -140,3 +147,10 @@ hr {
   margin: auto;
   width: 40%;
 }
+
+.Impressum th, td {
+  padding: 5px;
+  text-align: left;    
+}
+
+.Impressum tr:hover {background-color: #333300;}

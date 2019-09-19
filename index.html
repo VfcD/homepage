@@ -1,42 +1,145 @@
 <!DOCTYPE html>
 <!-- saved from url=(0016)http://vfcd.org/ -->
 <html lang="de">
-	<head>
-		<link rel="stylesheet" href="css.css">
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>VfcD - Verein für coole Dinge</title>
-	</head>
-	<body>
-		<nav>
-			<ul>
-				<li><a href="#home">Home</a></li>
-				<li><a href="#kontakt">Kontakt</a></li>
-			</ul>
-		</nav>
-		<div id="home" class="bgimg-1">
-			<div class="caption">
-				<span class="border-1">Die Seite befindet sich im Aufbau. Bitte habt noch etwas Geduld :) </span>
-				<br><br>
-				<span class="border">VfcD</span>
-				<br><br>
-				<span class="border">Verein für coole Dinge</span>
-				
+
+<head>
+	<link rel="stylesheet" href="css.css">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>VfcD - Verein für coole Dinge e.V.</title>
+</head>
+
+<body>
+	<div class="topnav" id="myTopnav">
+		<a href="http://vfcd.org">Home</a>
+		<a href="#spenden">Spenden</a>
+		<a href="#impressum">Impressum</a>
+		<div class="dropdown">
+			<button class="dropbtn">Verein
+				<i class="fa fa-caret-down"></i>
+			</button>
+			<div class="dropdown-content">
+				<a href="#idee">Idee</a>
+				<a href="Satzung VfcD Nimbus.pdf">Satzung</a>
 			</div>
 		</div>
-		<p align="right">Foto:hambacherforst.org</p>
-		<div class="Kontakt">
-			<h1 id="kontakt">Kontakt</h1>
+		<a href="javascript:void(0);" style="font-size:20px;" class="icon" onclick="myFunction()">&#9776;</a>
+	</div>
+	<button onclick="topFunction()" id="myBtn" title="Go to top">top</button>
+	<div id="home" class="bgimg-1">
+		<div class="caption">
+			<br><br>
+			<span class="border">VfcD</span>
+			<br><br>
+			<span class="border">Verein für coole Dinge e.V.</span>
+		</div>
+	</div>
+	<div style="text-align:right">Foto:hambacherforst.org</div>
+	<div class="Content">
+		<div class="Verein">
+			<div class="Idee">
+				<h1 id="idee" class="anchor">Idee des VfcD - Verein für coole Dinge`s</h1>
+				<p>
+					Der Verein soll als Basis für die Umsetzung von Ideen und Projekten bereitstehen. So unterstützen wir unsere Mitglieder unter anderem bei der Ausrichtung kultureller Veranstaltungen, engagieren uns gemeinsam in der Lokalpolitik und stellen unsere Räumlichkeiten allen Personen zur Verfügung, die coole Dinge umsetzen wollen! Dabei gibt es (fast) keine Einschränkungen in der ausführenden Art und Weise. Allein durch die Existenz werden Menschen motiviert coole Dinge zu tun.
+				</p>
+			</div>
+		</div>
+		<div class="Spenden">
+			<h1 id="spenden" class="anchor">Spenden</h1>
 			<p>
-				Ansprechpartner: Bartosz Makosch <br>
-				E-Mail an: vfcd(at)vfcd.org <br>
-				<a href="https://de-de.facebook.com/vfcd1/"> <img src="./img/fb2.png" alt="facebook symbol"> </a>
+				Wir freuen uns über jegliche finanzielle Unterstützung!
+				Ganz egal ob allgemeiner oder projektbezogener Spende.<br>
+				Mit der Spende kann jede/r selbst entscheiden, für welchen Zweck die Spende eingesetzt werden soll.
+			</p>
+			<p>
+				Aktuell könnt ihr über einen PayPal.Me Link spenden: <a href="https://paypal.me/vfcd">https://paypal.me/vfcd</a><br>
+				<a href="https://paypal.me/vfcd?locale.x=de_DE"> <img src="./img/pp.jpg" alt="paypal symbol"> </a>
 			</p>
 		</div>
-		<footer>
-			<center>
-			<p>© 2019 by bm</p>
-			</center>
-		</footer>
-	</body>
+	</div>
+	<div class="Impressum">
+		<h1 id="impressum" class="anchor">Impressum</h1>
+		<table align="center" style="width:50%">
+			<tr>
+				<th colspan="2">Gemeinschaftlich vertretungsberechtigt:</th>
+			</tr>
+			<tr>
+				<th>1. Vorstand</th>
+				<td style="width:240px">Bartosz Makosch</td>
+			</tr>
+			<tr>
+				<th>2. Vorstand</th>
+				<td>Lisa Schubert</td>
+			</tr>
+			<tr>
+				<th>Schatzmeister</th>
+				<td>Elias Henrich</td>
+			</tr>
+			<tr>
+				<th>Vereinssitz</th>
+				<td>VfcD - Verein für coole Dinge<br>
+					c/o Bartosz Makosch<br>
+					Schumannstraße 41 <br>
+					53113 Bonn</td>
+			</tr>
+		</table>
+		<table align="center" style="width:50%">
+			<h1>Kontakt</h1>
+			<tr>
+				<th>E-Mail</th>
+				<td style="width:240px">vfcd(at)vfcd.org</td>
+			</tr>
+		</table>
+	</div>
+	<footer>
+		<center>
+			<a href="https://de-de.facebook.com/vfcd1/"> <img src="./img/fb2.png" alt="facebook symbol"> </a>
+			<p>© 2019 VfcD - <a href="Datenschutz und Disclaimer.html">Datenschutz und Disclaimer</a></p>
+		</center>
+	</footer>
+	<script>
+	function myFunction() {
+		var x = document.getElementById("myTopnav");
+		if (x.className === "topnav") {
+			x.className += " responsive";
+		} else {
+			x.className = "topnav";
+		}
+	}
+
+	window.onclick = function(e) {
+		var y = document.getElementById("myTopnav");
+		if (!e.target.matches('.icon')) {
+			if (!e.target.matches('.myBtn')) {
+				var x = document.getElementById("myTopnav");
+				if (x.className === "topnav responsive") {
+					x.className = "topnav";
+				}
+			}
+
+		}
+
+	}
+
+
+	// When the user scrolls down 20px from the top of the document, show the button
+	window.onscroll = function() { scrollFunction() };
+
+	function scrollFunction() {
+		if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+			document.getElementById("myBtn").style.display = "block";
+		} else {
+			document.getElementById("myBtn").style.display = "none";
+		}
+	}
+
+	// When the user clicks on the button, scroll to the top of the document
+	function topFunction() {
+		document.body.scrollTop = 0;
+		document.documentElement.scrollTop = 0;
+	}
+
+	</script>
+</body>
+
 </html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <link rel="stylesheet" href="css.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VfcD - Verein für coole Dinge e.V.</title>
+</head>
+
+<body>
+    <h1>Mitgliedsantrag</h1>
+    <p>
+        Hiermit beantrage ich die Mitgliedschaft beim
+        <h3>VfcD - Verein für coole Dinge e.V.</h3>
+        Bitte, bitte lieber Verein nimm mich auf, hier sind meine Daten :)
+    </p>
+    <form>
+        <fieldset>
+            <legend>Persönliche Angaben:</legend>
+            Vorname:<br>
+            <input type="text" name="vorname" maxlength=20 placeholder="Albert" autofocus="">
+            <center>
+                Nachname:<br>
+                <input type="text" name="nachname" maxlength=20 placeholder="Einstein">
+            </center>
+            Geboren am:<br>
+            <input type="date" id="geburtstag" name="geburtstag" min="1901-01-01" max="">
+            <center>
+                Email:<br>
+                <input type="email" name="E-Mail" placeholder="alberteinstein@gmx.de">
+            </center>
+        </fieldset>
+        <fieldset>
+            <legend>Selfie Area</legend>
+            <form id="form1" runat="server">
+                <input type="file" onchange="document.getElementById('blah').src = window.URL.createObjectURL(this.files[0])">
+                <img id="blah" alt="your image" width="500" height="500" />
+                <div>
+                    Meine 3 #Hashtags:<br>
+                    <label class="radio-inline">
+                        <input type="text" name="hash1" maxlength=20 placeholder="Physik">
+                        <input type="text" name="hash2" maxlength=20 placeholder="Wandern">
+                        <input type="text" name="hash3" maxlength=20 placeholder="Computer">
+                    </label>
+                </div>
+            </form>
+        </fieldset>
+        <fieldset>
+            <legend>Mitgliedsbeitrag</legend>
+            <p>
+                Ich möchte folgenden Beitrag zahlen:
+            </p>
+            <form onchange="x.value=parseInt(a.value)*parseInt(b.value)">
+                <label class="radio-inline">
+                    <input type="number" id="a" name="a" min="1" max="9999" value="1">€
+                    x <input type="number" id="b" name="b" min="1" max="50" size="2" value="12">Monate bezahlen
+                    = <output name="x" for="a b"></output>€
+                </label>
+            </form>
+        </fieldset>
+        <p align="right">
+            erstellt am: <span id="datetime"></span>
+        </p>
+        <center><input type="reset" value="Eingaben löschen"><button onclick="seiteDrucken()">Antrag drucken</button></center><br>
+    </form>
+    <footer>
+        <center>(Es werden keine Daten übermittelt. Ihr müsst das Formular selbständig per E-Mail versenden)</center>
+    </footer>
+    <script>
+    function seiteDrucken() {
+        window.print();
+    }
+
+
+    var dt = new Date();
+    document.getElementById("datetime").innerHTML = (("0" + dt.getDate()).slice(-2)) + "." + (("0" + (dt.getMonth() + 1)).slice(-2)) + "." + (dt.getFullYear()) + " " + (("0" + dt.getHours()).slice(-2)) + ":" + (("0" + dt.getMinutes()).slice(-2));
+
+
+    var dtmin = (dt.getFullYear() - 16) + "-" + (("0" + (dt.getMonth() + 1)).slice(-2)) + "-" + (("0" + dt.getDate()).slice(-2));
+    document.getElementById("geburtstag").setAttribute("max", dtmin);
+    </script>
+</body>

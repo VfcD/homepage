@@ -283,3 +283,79 @@ td {
 #myBtn:hover {
   background-color: #555;
 }
+
+
+/* MITGLIEDSANTRAG */
+.Content.tighter {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media screen and (max-width: 599px) {
+  .Content.tighter {
+    max-width: 100vw;
+    padding: 50px 10px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .tighter {
+    max-width: 50vw;
+  }
+}
+
+.formMitgliedsantrag .form-row {
+  margin-bottom: 1em;
+}
+
+.formMitgliedsantrag label {
+  width: 150px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.formMitgliedsantrag input,button {
+  font: 400 18px/1.8 "Lato", sans-serif;
+}
+
+.formMitgliedsantrag input[type="text"],input[type="date"],input[type="email"] {
+  width: calc(100% - 190px);
+  padding-left: 7px;
+}
+
+.selfieArea {
+  margin: 1.5em auto 1.5em auto;
+  width: 50%;
+  border: 1px solid #777;
+  text-align: center;
+  padding: 25px;
+  cursor: pointer;
+}
+
+.selfieArea:hover {
+  color: #000;
+  border-color: #000;
+}
+
+.selfieArea img {
+  max-width: 100%;
+}
+
+
+.formMitgliedsantrag .submit {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.formMitgliedsantrag .submit button {
+  padding: 0.45em 2em;
+}
+
+.formMitgliedsantrag .captcha {
+  text-align: center;
+}
+
+.formMitgliedsantrag .captcha img {
+  transform: scale(1.2);
+}
